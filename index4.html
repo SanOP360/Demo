@@ -29,17 +29,16 @@
     </ul>
    </div>
   </div>
-<script>
-  const secondItem = document.querySelectorAll('.list-group-item:nth-child(2)')[0];
-  secondItem.style.color = 'green';
 
-  
-  const oddItems = document.querySelectorAll('.list-group-item:nth-child(odd)');
-  oddItems.forEach((item) => {
-    item.style.backgroundColor = 'green';
-  });
+  <script>
+  const item = document.querySelector('.list-group-item');
+ const secondItem = document.querySelector('.list-group-item:nth-child(2)');
+ secondItem.style.backgroundColor = 'blue';
 
-  </script>
+   const thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+   thirdItem.style.display='none';  
+</script>
+
 
 </body>
 </html>
