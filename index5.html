@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <title>Item Lister</title>
+  </head>
+  <body>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+      <div class="container">
+        <h1 id="header-title">
+          Item Lister <span style="display: none">123</span>
+        </h1>
+      </div>
+    </header>
+    <div class="container">
+      <div id="main" class="card card-body">
+        <h2 class="title">Add Items</h2>
+        <form class="form-inline mb-3">
+          <input type="text" class="form-control mr-2" />
+          <input type="submit" class="btn btn-dark" value="Submit" />
+        </form>
+        <h2 class="title">Items</h2>
+        <ul id="items" class="list-group">
+          <li class="list-group-item">Item 1</li>
+          <li class="list-group-item">Item 2</li>
+          <li class="list-group-item">Item 3</li>
+          <li class="list-group-item">Item 4</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+    //   var itemList = document.querySelector("#items");
+      // console.log(itemList.parentNode);
+      // itemList.parentNode.style.backgroundColor='grey';
+      // console.log(itemList.parentNode.parentNode);
+
+      // console.log(itemList.parentElement);
+      // itemList.parentElement.style.backgroundColor='grey';
+
+      // console.log(itemList.children);
+      // console.log(itemList.children[1]);
+      // itemList.children[1].style.backgroundColor='yellow';
+
+      // console.log(itemList.firstChild);
+
+      // console.log(itemList.firstElementChild);
+      // itemList.firstElementChild.textContent='hello';
+
+      // console.log(itemList.lastElementChild);
+      // itemList.lastElementChild.textContent='hello2';
+
+      // console.log(itemList.nextSibling)
+
+      // console.log(itemList.nextElementSibling);
+
+      // console.log(itemList.previousElementSibling);
+
+      var newDiv = document.createElement("div");
+newDiv.className = "hello";
+newDiv.id = "hello1";
+newDiv.setAttribute("title", "hello div");
+
+var divText = document.createTextNode("Hello Word");
+newDiv.appendChild(divText);
+
+var container = document.querySelector("header .container");
+var h1 = document.querySelector("header h1");
+container.insertBefore(newDiv, h1);
+
+newDiv.style.fontSize = "30px";
+
+var newDiv2 = document.createElement("div");
+newDiv2.className = "hello2";
+newDiv2.id = "hello2";
+newDiv2.setAttribute("title", "hello div");
+
+var divText2 = document.createTextNode("HELLO WORD");
+newDiv2.appendChild(divText2);
+
+var itemList = document.querySelector("#items");
+var itemone=document.querySelector(".list-group-item");
+itemList.insertBefore(newDiv2, itemone);  
+
+newDiv2.style.fontSize = "20px";
+
+    </script>
+  </body>
+</html>
