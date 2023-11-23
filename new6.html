@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #171515;
+        }
+
+        #myform {
+            background-color: #fff;
+            padding: 20px;
+            
+        }
+
+        label {
+
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            background-color: #0056b3;
+        }
+
+        ul{
+            background-color:white;
+            color: black;
+        }
+        ul li{
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="myform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phoneNo">Phone No.</label>
+        <input type="tel" id="phoneNo" name="phoneNo">
+
+        <br>
+        <button type="submit" name="btn" id="btn">Submit</button>
+    </form>
+
+    <ul class="items">
+
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src='new6.js'></script>
+</body>
+</html>
