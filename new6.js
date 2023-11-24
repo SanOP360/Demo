@@ -30,18 +30,21 @@ function createElement(userData) {
   users.appendChild(li);
 
   button.addEventListener("click", function () {
-    //  delete action here
-    
-    const emailToRemove = userData.email;
-    // axios.delete("https://crudcrud.com/api/bd442d3d78904226a9427ea7d655460e/appointData/" + emailToRemove)
-    //   .then((response) => {
-    //     console.log(response);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    const idToRemove = encodeURIComponent(userData._id);
+
+    axios
+      .delete(
+        `https://crudcrud.com/api/bd442d3d78904226a9427ea7d655460e/appointData/${idToRemove}`
+      )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     li.remove();
   });
+
 
   editBtn.addEventListener("click", function () {
     // Handle the edit action here
