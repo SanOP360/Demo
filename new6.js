@@ -96,13 +96,17 @@ function onSubmit(e) {
 }
 
 // Load existing data from the server on page load
+// ...
+
+// Load existing data from the server on page load
 window.addEventListener("DOMContentLoaded", () => {
   axios
-    .get(
-      "https://crudcrud.com/api/bd442d3d78904226a9427ea7d655460e/appointData"
-    )
+    .get("https://crudcrud.com/api/bd442d3d78904226a9427ea7d655460e/appointData")
     .then((response) => {
       console.log(response);
+
+      // Clear existing items before recreating them
+      users.innerHTML = "";
 
       // Loop through existing data and create list items
       for (var i = 0; i < response.data.length; i++) {
