@@ -47,16 +47,34 @@ function createElement(userData) {
 
 
   editBtn.addEventListener("click", function () {
-    // Handle the edit action here
-    // For example: populate the form fields with the data for editing
-    myName.value = userData.name;
-    myEmail.value = userData.email;
-    myPhoneno.value = userData.phoneNo;
+  // Handle the edit action here
+  
+  myName.value = userData.name;
+  myEmail.value = userData.email;
+  myPhoneno.value = userData.phoneNo;
 
-    // Remove the list item from the DOM
-    li.remove();
-  });
-}
+  const idToUpdate = encodeURIComponent(userData._id);
+
+  axios
+    .put(
+      `https://crudcrud.com/api/bd442d3d78904226a9427ea7d655460e/appointData/${idToUpdate}`,
+      {
+        name: myName.value,
+        email: myEmail.value,
+        phoneNo: myPhoneno.value,
+      }
+    )
+    .then((response) => {
+      console.log(response);
+
+      
+      li.remove();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 
 myform.addEventListener("submit", onSubmit);
 
