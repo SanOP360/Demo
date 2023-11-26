@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Shop</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #171515;
+            color: white;
+        }
+
+        #myform {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color:black;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            background-color: #0056b3;
+        }
+
+        .items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .items li {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .items li button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #total-price-container {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 2rem;
+            color:lightgreen;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" id="myform">
+        <label for="name">Product Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" required>
+        <br>
+        <button type="submit" name="btn" id="btn">Add Item</button>
+    </form>
+
+    <ul class="items" id="product-list">
+        
+    </ul>
+
+    <div id="total-price-container">
+        <span>Total Price: $<span id="total-price">0.00</span></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src='ecommerce.js'></script>
+</body>
+</html>
